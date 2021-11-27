@@ -10,6 +10,7 @@ function printNumber(a, b) {
         printNumber(a, b);
     } else {
         console.log(a);
+        return;
     }
 }
 printNumber(10, 1);
@@ -37,7 +38,7 @@ switchBtn.addEventListener('click', function(){
     toggleFormat();
 });
 
-function getFormatedTime() {
+function getFormattedTime() {
     let time = getTime();
     let hours = time[0];
     let minutes = time[1];
@@ -46,14 +47,11 @@ function getFormatedTime() {
     if(hours < 10){hours = "0"+ hours;}
     if(minutes < 10){minutes = "0"+ minutes;}
     if(seconds < 10){seconds = "0"+ seconds;}
-
-    if (formatWithSeconds) {
-        return `${hours}:${minutes}:${seconds}`;
-    } 
-    return `${hours}:${minutes}`;
+    
+    return formatWithSeconds ? `${hours}:${minutes}:${seconds}` :`${hours}:${minutes}`;
 }
 function clockTimer() {
-    clock.innerText = getFormatedTime();
+    clock.innerText = getFormattedTime();
 }
 clockTimer();
 setInterval(clockTimer, 250);
