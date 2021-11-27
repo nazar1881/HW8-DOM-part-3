@@ -1,0 +1,38 @@
+body {
+    background-color: #404040;
+}
+
+.clockpage {
+  margin: auto;
+  max-width: 500px;
+  min-width: 100px;
+  background: white;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 32px;
+  padding: 10px;
+  font-weight: bold;
+  border-top: 10px solid #55c49f;
+  margin-top: 100px;
+}
+
+#clock {
+  display: block;
+  color: #3d3d3d;
+}
+
+#switch-format {
+  border: none;
+  background-color: #55c49f;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#switch-format:hover {
+  transition: .4s;
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px #3d3d3d;
+}
